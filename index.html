@@ -1,21 +1,50 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberDungeon</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>CyberDungeon</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <div class="terminal">
+    <header>
+      <img src="CyberDungeon.png" alt="CyberDungeon" class="logo" />
+    </header>
+    <p class="info">Selecciona un personaje</p>
 
-    <div id="board">
-        <img src="tablero2.png" alt="Tablero">
-    </div>
+    <section class="characters">
+      <div class="card" data-character="executor">
+        <div class="card-inner">
+          <img src="hacker_1.png" class="card-face front" />
+          <img src="hacker_2.png" class="card-face back" />
+        </div>
+      </div>
 
-    <script src="dungeon.js"></script>
+      <div class="card" data-character="hacker">
+        <div class="card-inner">
+          <img src="hacker_1.png" class="card-face front" />
+          <img src="hacker_2.png" class="card-face back" />
+        </div>
+      </div>
 
+      <div class="card" data-character="ex_operativo">
+        <div class="card-inner">
+          <img src="hacker_1.png" class="card-face front" />
+          <img src="hacker_2.png" class="card-face back" />
+        </div>
+      </div>
+    </section>
+
+    <section class="game-data">
+      <input type="text" id="playerName" placeholder="IDENTIDAD DEL OPERADOR" />
+      <div class="room-code">SESSION ID: <strong id="roomCode"></strong></div>
+      <button id="playBtn" disabled>INICIAR INCURSIÓN</button>
+    </section>
+  </div>
+
+  <script src="index.js"></script>
 </body>
 
 </html>
